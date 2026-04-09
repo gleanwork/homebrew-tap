@@ -5,21 +5,21 @@
 class GleanCli < Formula
   desc "A command-line interface for Glean operations"
   homepage "https://github.com/gleanwork/glean-cli"
-  version "0.11.0"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gleanwork/glean-cli/releases/download/v0.11.0/glean-cli_Darwin_x86_64.tar.gz"
-      sha256 "129598a57e6c961ec933ac9ca45cad1b673e09e18d5abb943d7b39e4289132d5"
+      url "https://github.com/gleanwork/glean-cli/releases/download/v0.12.0/glean-cli_Darwin_x86_64.tar.gz"
+      sha256 "85d6032d16445bac0a2aab468997e92ff7514ff48ef76e6118065223afd9a744"
 
       define_method(:install) do
         bin.install "glean"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gleanwork/glean-cli/releases/download/v0.11.0/glean-cli_Darwin_arm64.tar.gz"
-      sha256 "b9570cf5681a0e036b6e762e5d8ed7df1c72c69227c33146cceda813d8163e08"
+      url "https://github.com/gleanwork/glean-cli/releases/download/v0.12.0/glean-cli_Darwin_arm64.tar.gz"
+      sha256 "ddb7f5ecef39cf3c3abf50073aa39cf7fa994410d24bf94761f990c25b829a37"
 
       define_method(:install) do
         bin.install "glean"
@@ -29,15 +29,15 @@ class GleanCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleanwork/glean-cli/releases/download/v0.11.0/glean-cli_Linux_x86_64.tar.gz"
-      sha256 "f7d9311266a7148c621d69ed9a2d1bd33a33ceb7e77ecc0660fe0d81aa2ca17b"
+      url "https://github.com/gleanwork/glean-cli/releases/download/v0.12.0/glean-cli_Linux_x86_64.tar.gz"
+      sha256 "b6065a388c0a55588226fc7aae31e5ba4a9566e9f56140e9218ca02ebbf7ad55"
       define_method(:install) do
         bin.install "glean"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gleanwork/glean-cli/releases/download/v0.11.0/glean-cli_Linux_arm64.tar.gz"
-      sha256 "7f00a5efb840a98f225595ba94d19199f7488f0bf5ecbc4ae1d0306b5df98970"
+      url "https://github.com/gleanwork/glean-cli/releases/download/v0.12.0/glean-cli_Linux_arm64.tar.gz"
+      sha256 "d899d5690eca63496895c7271f476de9a420abd1dc3dcc46718c5faada2a3bd8"
       define_method(:install) do
         bin.install "glean"
       end
